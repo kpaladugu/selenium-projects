@@ -15,7 +15,7 @@ public class DriverFactory {
 		PropertyReader propertyReader = PropertyReader.getPropertyReaderInstance();
 		String browser = propertyReader.getConfigData("browserName");
 		
-		switch(browser.toLowerCase()){
+		switch(browser){
 			case "firefox":
 				System.setProperty("webdriver.gecko.driver", propertyReader.getConfigData("ff.driver.path"));
 				driver = new FirefoxDriver();
