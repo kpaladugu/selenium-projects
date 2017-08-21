@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AmazonRegressionSuite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.amazon.tests.AmazonSearchTest">
+        <methods>
+          <include name="getTestData"/>
+          <include name="beforeMethod"/>
+          <include name="searchTest" invocation-numbers="0 1"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.amazon.tests.AmazonSearchTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [AmazonRegressionSuite] -->
