@@ -15,15 +15,12 @@ public class DriverFactory {
 		PropertyReader propertyReader = PropertyReader.getPropertyReaderInstance();
 		String browser = propertyReader.getConfigData("browserName");
 		
-		switch(browser){
-			case "firefox":
+		if(browser.equalsIgnoreCase("firefox")){
 				System.setProperty("webdriver.gecko.driver", propertyReader.getConfigData("ff.driver.path"));
 				driver = new FirefoxDriver();
-				break;
-			case "chrome":
+		}else{
 				System.setProperty("webdriver.chrome.driver", propertyReader.getConfigData("chrome.driver.path"));
 				driver = new ChromeDriver();
-				break;
 		}
 		
 		return driver;
